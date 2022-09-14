@@ -14,7 +14,7 @@ Based on [Kihyuk Sohn's paper](https://papers.nips.cc/paper/2015/hash/8d55a249e6
 # Models architecture
 In the folder `Models architecture`, you will find the details of the different models used.  
 
-First, two disentangled Vae models (one per dataset) with almost the same architecture (just a few changes made to the convolutional layers arguments due to the image size difference for each dataset). The models can take as input either a value or an array for the hyperparameter $\beta$. It can be interesting if you want to make $\beta$ change during the training process (i.e. $\beta$ increasing over each epoch). After experimentation of different behaviour for $\beta$, we concluded that we obtain the best model by fixing this hyperparameter to $\beta = 0.1$. We observe the same thibg for the conditional Vaes. 
+First, two disentangled Vae models (one per dataset) with almost the same architecture (just a few changes made to the convolutional layers arguments due to the image size difference for each dataset). The models can take as input either a value or an array for the hyperparameter $\beta$. It can be interesting if you want to make $\beta$ change during the training process (i.e. $\beta$ increasing over each epoch). After experimentation of different behaviour for $\beta$, we concluded that we obtain the best model by fixing this hyperparameter to $\beta = 0.1$. We observe the same thing for the conditional Vaes. 
 
 Then, three Conditional Vae models (for the second dataset):    
 - `cvae`: new input created by concatenation of the redshifts to the galaxy images into a second channel which is fed to the CNN. Then, we concatenate the redshifts to the latent variable $z$ into a second channel. The final output is the reconstructed galaxy image.
