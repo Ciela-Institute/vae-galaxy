@@ -1,4 +1,3 @@
-
 # Topic
 This project aims to generate galaxy images based on data provided by the Hubble Space Telescope (HST). To do so, we are implementing an unsupervised machine learning technique called a Variational Autoencoder (Vae) based on statistical Bayesian inference. The trained Vae model allows us to decode a random latent variable $z$ sampled from a normal distribution $\mathcal{N}(0;1)$ into a realistic galaxy image. For further information on the general Vae model, please read : [Auto-encoding Variational Bayes, _Kingma and Welling_, 2014](https://arxiv.org/abs/1312.6114?context=cs.LG).  
 
@@ -7,10 +6,15 @@ We used two datasets :
 128 $\times$ 128 pixels)
 - 81 499 galaxies and their associated redshifts from the Cosmic Survey (the images have 158 $\times$ 158 pixels) 
 
-For each dataset, we developped a $\beta$-Vae architecture. For galaxy image generation, we found that the reconstruction performance of our model is better with low value for $\beta$. In our case, we fixed this hyperparameter to $\beta = 0.1$ during the whole training process.  
+For each dataset, we developped a $\beta$-Vae architecture taking from the [DCGAN architecture](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html) the discriminator architecture as our encoder and the generator as our discriminator. For galaxy image generation, we found that the reconstruction performance of our model is better with low value for $\beta$. In our case, we fixed this hyperparameter to $\beta = 0.1$ during the whole training process.  
 
-Based on [Kihyuk Sohn's paper](https://papers.nips.cc/paper/2015/hash/8d55a249e6baa5c06772297520da2051-Abstract.html), we even implemented a Conditional Vae on the second dataset with the redshifts of each galaxy. In the end, our conditional vae is able to generate galaxy structures for a specific redshift. We can even do an interpolation of the same galaxy structure for different redshifts.  
+Based on [Kihyuk Sohn's paper](https://papers.nips.cc/paper/2015/hash/8d55a249e6baa5c06772297520da2051-Abstract.html), we even implemented a Conditional Vae on the second dataset with the redshifts of each galaxy. In the end, our conditional vae is able to generate galaxy structures for a specific redshift. We can even do an interpolation of the same galaxy structure for different redshifts: 
 
+<p align="center">
+ <img src="https://github.com/Ciela-Institute/vae-galaxy/assets/104883058/77a5b79e-d8f0-4a19-b84d-5f86c191b1bd" width="30%" height="30%"/>
+ <img src="https://github.com/Ciela-Institute/vae-galaxy/assets/104883058/90866624-5237-481e-842e-ea6a74cca991" width="30%" height="30%"/>
+
+</p>
 # Models architecture
 In the folder `Models architecture`, you will find the details of the different models used.  
 
