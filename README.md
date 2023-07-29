@@ -53,7 +53,7 @@ In the folder `notebooks`, you will find all the code related to each model's tr
 Training our model on a bigger dataset (314 000 galaxy images instead of 81 500).
 
 ## Fine-tuning of the model
-We could maybe improve the results with some fine-tuning of the hyperparameters of the model or with different machine learning approaches that are not implemented yet (i.e. learning rate decay). 
+We could maybe improve the results with some fine-tuning of the hyperparameters of the model or with different machine learning approaches that are not implemented yet (e.g. learning rate decay). 
 
 
 
