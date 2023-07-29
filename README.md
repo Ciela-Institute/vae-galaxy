@@ -15,7 +15,7 @@ Based on [Kihyuk Sohn's paper](https://papers.nips.cc/paper/2015/hash/8d55a249e6
  <img src="https://github.com/Ciela-Institute/vae-galaxy/assets/104883058/90866624-5237-481e-842e-ea6a74cca991" width="30%" height="30%"/>
 
 </p>
-# Models architecture
+# Models architecture  
 In the folder `Models architecture`, you will find the details of the different models used.  
 
 First, two disentangled Vae models (one per dataset) with almost the same architecture (just a few changes made to the convolutional layers arguments due to the image size difference for each dataset). The models can take as input either a value or an array for the hyperparameter $\beta$. It can be interesting if you want to make $\beta$ change during the training process (i.e. $\beta$ increasing over each epoch). After experimentation of different behaviour for $\beta$, we concluded that we obtain the best model by fixing this hyperparameter to $\beta = 0.1$. We observe the same thing for the conditional Vaes. 
