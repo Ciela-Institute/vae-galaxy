@@ -15,6 +15,7 @@ Based on [Kihyuk Sohn's paper](https://papers.nips.cc/paper/2015/hash/8d55a249e6
  <img src="https://github.com/Ciela-Institute/vae-galaxy/assets/104883058/90866624-5237-481e-842e-ea6a74cca991" width="30%" height="30%"/>
 
 </p>
+
 # Models architecture  
 In the folder `Models architecture`, you will find the details of the different models used.  
 
